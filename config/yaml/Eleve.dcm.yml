@@ -28,3 +28,10 @@ Eleve:
             options:
                 fixed: false
     lifecycleCallbacks: {  }
+    oneToMany:
+        formation:
+            targetEntity: formation
+            mappedBy: eleve
+        participation:
+            targetEntity: participation
+            mappedBy: eleve
