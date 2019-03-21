@@ -18,3 +18,7 @@ Salle:
             options:
                 fixed: false
     lifecycleCallbacks: {  }
+    oneToMany:
+        film:
+            targetEntity: session
+            mappedBy: salle

@@ -30,3 +30,20 @@ Session:
             nullable: true
             column: date_fin
     lifecycleCallbacks: {  }
+    manyToOne:
+        salle:
+            targetEntity: salle
+            inversedBy: session
+            joinColumn:
+                salle_idsalle:
+                    referencedColumnName: idsalle
+        professeur:
+            targetEntity: professeur
+            inversedBy: session
+            joinColumn:
+                professeur_idprofesseur:
+                    referencedColumnName: idprofesseur
+    oneToMany:
+        participation:
+            targetEntity: participation
+            mappedBy: session
