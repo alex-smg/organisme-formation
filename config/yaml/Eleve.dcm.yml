@@ -28,3 +28,10 @@ Eleve:
             options:
                 fixed: false
     lifecycleCallbacks: {  }
+    manyToOne:
+        entreprise:
+            targetEntity: entreprise
+            inversedBy: eleve
+            joinColumn:
+                identreprise:
+                    referencedColumnName: entreprise_identreprise
