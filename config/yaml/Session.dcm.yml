@@ -43,6 +43,12 @@ Session:
             joinColumn:
                 professeur_idprofesseur:
                     referencedColumnName: idprofesseur
+        formation:
+            targetEntity: formation
+            inversedBy: session
+            joinColumn:
+                formation_idFormation:
+                    referencedColumnName: idformation
     oneToMany:
         participation:
             targetEntity: participation
