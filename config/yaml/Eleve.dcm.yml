@@ -28,6 +28,7 @@ Eleve:
             options:
                 fixed: false
     lifecycleCallbacks: {  }
+<<<<<<< HEAD
     oneToMany:
         formation:
             targetEntity: formation
@@ -35,3 +36,12 @@ Eleve:
         participation:
             targetEntity: participation
             mappedBy: eleve
+=======
+    manyToOne:
+        entreprise:
+            targetEntity: entreprise
+            inversedBy: eleve
+            joinColumn:
+                identreprise:
+                    referencedColumnName: entreprise_identreprise
+>>>>>>> 1600484b8fe13afe8c7377aa7d45b7583b759e57

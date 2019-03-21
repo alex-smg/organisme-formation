@@ -18,3 +18,7 @@ Entreprise:
             options:
                 fixed: false
     lifecycleCallbacks: {  }
+    oneToMany:
+        film:
+            targetEntity: eleve
+            mappedBy: entreprise
