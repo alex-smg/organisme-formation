@@ -1,0 +1,51 @@
+Formation:
+    type: entity
+    table: formation
+    indexes:
+        fk_formation_professeur1_idx:
+            columns:
+                - professeur_idprofesseur
+    id:
+        idformation:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: idFormation
+            generator:
+                strategy: IDENTITY
+    fields:
+        nom:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+        categorie:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+    manyToOne:
+        professeurprofesseur:
+            targetEntity: Professeur
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                professeur_idprofesseur:
+                    referencedColumnName: idprofesseur
+            orphanRemoval: false
+    manyToMany:
+        eleveeleve:
+            targetEntity: Eleve
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: formationformation
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }

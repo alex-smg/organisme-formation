@@ -1,0 +1,76 @@
+Eleve:
+    type: entity
+    table: eleve
+    indexes:
+        fk_eleve_entreprise1_idx:
+            columns:
+                - entreprise_identreprise
+    id:
+        ideleve:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nom:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+        prenom:
+            type: string
+            nullable: true
+            length: 45
+            options:
+                fixed: false
+    manyToOne:
+        entrepriseentreprise:
+            targetEntity: Entreprise
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                entreprise_identreprise:
+                    referencedColumnName: identreprise
+            orphanRemoval: false
+    manyToMany:
+        formationformation:
+            targetEntity: Formation
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: eleveeleve
+            joinTable:
+                name: eleve_has_formation
+                joinColumns:
+                    -
+                        name: eleve_ideleve
+                        referencedColumnName: ideleve
+                inverseJoinColumns:
+                    -
+                        name: formation_idFormation
+                        referencedColumnName: idFormation
+            orderBy: null
+        sessionsession:
+            targetEntity: Session
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: eleveeleve
+            joinTable:
+                name: participation
+                joinColumns:
+                    -
+                        name: eleve_ideleve
+                        referencedColumnName: ideleve
+                inverseJoinColumns:
+                    -
+                        name: session_idsession
+                        referencedColumnName: idsession
+            orderBy: null
+    lifecycleCallbacks: {  }
