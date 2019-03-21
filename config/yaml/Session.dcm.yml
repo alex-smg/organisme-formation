@@ -30,3 +30,10 @@ Session:
             nullable: true
             column: date_fin
     lifecycleCallbacks: {  }
+    manyToOne:
+        entreprise:
+            targetEntity: formation
+            inversedBy: session
+            joinColumn:
+                identreprise:
+                    referencedColumnName: formation_idformation

@@ -29,3 +29,8 @@ Formation:
             options:
                 fixed: false
     lifecycleCallbacks: {  }
+    oneToMany:
+        film:
+            targetEntity: session
+            mappedBy: formation
+
