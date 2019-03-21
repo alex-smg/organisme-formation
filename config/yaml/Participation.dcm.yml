@@ -1,30 +1,26 @@
-Formation:
+Participation:
     type: entity
-    table: formation
+    table: participation
     indexes:
-        fk_formation_professeur1_idx:
+        fk_participation_session1_idx:
             columns:
-                - professeur_idprofesseur
+                - session_idsession
+        fk_participation_eleve1_idx:
+            columns:
+                - eleve_ideleve
     id:
-        idformation:
+        idparticipation:
             type: integer
             nullable: false
             options:
                 unsigned: false
             id: true
-            column: idFormation
             generator:
                 strategy: IDENTITY
     fields:
-        nom:
+        note:
             type: string
-            nullable: false
-            length: 45
-            options:
-                fixed: false
-        categorie:
-            type: string
-            nullable: false
+            nullable: true
             length: 45
             options:
                 fixed: false

@@ -29,44 +29,4 @@ Session:
             type: datetime
             nullable: true
             column: date_fin
-    manyToOne:
-        formationformation:
-            targetEntity: Formation
-            cascade: {  }
-            fetch: LAZY
-            mappedBy: null
-            inversedBy: null
-            joinColumns:
-                formation_idFormation:
-                    referencedColumnName: idFormation
-            orphanRemoval: false
-        professeurprofesseur:
-            targetEntity: Professeur
-            cascade: {  }
-            fetch: LAZY
-            mappedBy: null
-            inversedBy: null
-            joinColumns:
-                professeur_idprofesseur:
-                    referencedColumnName: idprofesseur
-            orphanRemoval: false
-        sallesalle:
-            targetEntity: Salle
-            cascade: {  }
-            fetch: LAZY
-            mappedBy: null
-            inversedBy: null
-            joinColumns:
-                salle_idsalle:
-                    referencedColumnName: idsalle
-            orphanRemoval: false
-    manyToMany:
-        eleveeleve:
-            targetEntity: Eleve
-            cascade: {  }
-            fetch: LAZY
-            mappedBy: sessionsession
-            inversedBy: null
-            joinTable: null
-            orderBy: null
     lifecycleCallbacks: {  }
