@@ -30,7 +30,7 @@ Formation:
                 fixed: false
     lifecycleCallbacks: {  }
     oneToMany:
-        film:
+        session:
             targetEntity: session
             mappedBy: formation
 
