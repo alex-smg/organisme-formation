@@ -36,6 +36,6 @@ Eleve:
         entreprise:
             targetEntity: entreprise
             inversedBy: eleve
-            joinColumn:
+            joinColumns:
                 entreprise_identreprise:
                     referencedColumnName: identreprise

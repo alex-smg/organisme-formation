@@ -8,6 +8,7 @@ Entreprise:
             options:
                 unsigned: false
             id: true
+            column: identreprise
             generator:
                 strategy: IDENTITY
     fields:
@@ -19,6 +20,6 @@ Entreprise:
                 fixed: false
     lifecycleCallbacks: {  }
     oneToMany:
-        film:
+        eleve:
             targetEntity: eleve
             mappedBy: entreprise

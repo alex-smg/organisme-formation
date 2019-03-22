@@ -34,19 +34,19 @@ Session:
         salle:
             targetEntity: salle
             inversedBy: session
-            joinColumn:
+            joinColumns:
                 salle_idsalle:
                     referencedColumnName: idsalle
         professeur:
             targetEntity: professeur
             inversedBy: session
-            joinColumn:
+            joinColumns:
                 professeur_idprofesseur:
                     referencedColumnName: idprofesseur
         formation:
             targetEntity: formation
             inversedBy: session
-            joinColumn:
+            joinColumns:
                 formation_idFormation:
                     referencedColumnName: idformation
     oneToMany:
