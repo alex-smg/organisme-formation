@@ -34,12 +34,6 @@ Formation:
             targetEntity: session
             mappedBy: formation
     manyToOne:
-        eleve:
-            targetEntity: eleve
-            inversedBy: formation
-            joinColumns:
-                eleve_ideleve:
-                    referencedColumnName: ideleve
         professeur:
             targetEntity: professeur
             inversedBy: formation

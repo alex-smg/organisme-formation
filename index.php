@@ -1,13 +1,15 @@
-<?php
-
-require_once 'bootstrap.php';
+<?php 
+include 'header.php';
 ?>
-<html>
-    <head>
-        <meta charset="UTF-8">
-    </head>
 
-    <body>
-        <a href="templates/show_entreprise.php">Liste des entreprises</a>
-    </body>
+<body>
+    <ul>
+        <li>
+            <a href="templates/show_entreprise.php">Liste des entreprises</a>
+        </li>
+        <li>
+            <a href="templates/show_formation.php">Liste des formations</a>
+        </li>
+    </ul>
+</body>
 <html>

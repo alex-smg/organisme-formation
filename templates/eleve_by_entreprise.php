@@ -1,5 +1,5 @@
 <?php
-require_once '../bootstrap.php';
+include '../header.php';
 
 if ($_GET['id']) {
     $allEleve = $entityManager->getRepository("Eleve")->findByEntreprise($_GET['id']);
@@ -10,7 +10,7 @@ if ($_GET['id']) {
     <ul>
 <?php
 foreach ($allEleve as $key => $eleve) {
-    echo "<li><a href='show_eleve.php?id='>" . $eleve->getNom() . " " . $eleve->getPrenom() . "</a></li>";
+    echo "<li><a href='show_eleve.php?id=" . $eleve->getIdeleve() ."'>" . $eleve->getNom() . " " . $eleve->getPrenom() . "</a></li>";
 }
 ?>
     </ul>

@@ -28,11 +28,6 @@ class Formation
     private $session;
 
     /**
-     * @var \eleve
-     */
-    private $eleve;
-
-    /**
      * @var \professeur
      */
     private $professeur;
@@ -137,30 +132,6 @@ class Formation
     public function getSession()
     {
         return $this->session;
-    }
-
-    /**
-     * Set eleve.
-     *
-     * @param \eleve|null $eleve
-     *
-     * @return Formation
-     */
-    public function setEleve(\eleve $eleve = null)
-    {
-        $this->eleve = $eleve;
-
-        return $this;
-    }
-
-    /**
-     * Get eleve.
-     *
-     * @return \eleve|null
-     */
-    public function getEleve()
-    {
-        return $this->eleve;
     }
 
     /**
