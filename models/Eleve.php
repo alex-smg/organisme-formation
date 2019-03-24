@@ -28,6 +28,11 @@ class Eleve
     private $participation;
 
     /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $formation;
+
+    /**
      * @var \entreprise
      */
     private $entreprise;
@@ -38,6 +43,7 @@ class Eleve
     public function __construct()
     {
         $this->participation = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->formation = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -132,6 +138,42 @@ class Eleve
     public function getParticipation()
     {
         return $this->participation;
+    }
+
+    /**
+     * Add formation.
+     *
+     * @param \formation $formation
+     *
+     * @return Eleve
+     */
+    public function addFormation(\formation $formation)
+    {
+        $this->formation[] = $formation;
+
+        return $this;
+    }
+
+    /**
+     * Remove formation.
+     *
+     * @param \formation $formation
+     *
+     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
+     */
+    public function removeFormation(\formation $formation)
+    {
+        return $this->formation->removeElement($formation);
+    }
+
+    /**
+     * Get formation.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getFormation()
+    {
+        return $this->formation;
     }
 
     /**

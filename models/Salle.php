@@ -20,14 +20,14 @@ class Salle
     /**
      * @var \Doctrine\Common\Collections\Collection
      */
-    private $film;
+    private $session;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->film = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->session = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -65,38 +65,38 @@ class Salle
     }
 
     /**
-     * Add film.
+     * Add session.
      *
-     * @param \session $film
+     * @param \session $session
      *
      * @return Salle
      */
-    public function addFilm(\session $film)
+    public function addSession(\session $session)
     {
-        $this->film[] = $film;
+        $this->session[] = $session;
 
         return $this;
     }
 
     /**
-     * Remove film.
+     * Remove session.
      *
-     * @param \session $film
+     * @param \session $session
      *
      * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
      */
-    public function removeFilm(\session $film)
+    public function removeSession(\session $session)
     {
-        return $this->film->removeElement($film);
+        return $this->session->removeElement($session);
     }
 
     /**
-     * Get film.
+     * Get session.
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getFilm()
+    public function getSession()
     {
-        return $this->film;
+        return $this->session;
     }
 }

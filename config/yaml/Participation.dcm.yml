@@ -25,3 +25,16 @@ Participation:
             options:
                 fixed: false
     lifecycleCallbacks: {  }
+    manyToOne:
+        eleve:
+            targetEntity: eleve
+            inversedBy: participation
+            joinColumns:
+                eleve_ideleve:
+                    referencedColumnName: ideleve
+        session:
+            targetEntity: session
+            inversedBy: participation
+            joinColumns:
+                session_idsession:
+                    referencedColumnName: idsession

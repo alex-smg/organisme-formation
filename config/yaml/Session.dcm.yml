@@ -48,7 +48,7 @@ Session:
             inversedBy: session
             joinColumns:
                 formation_idFormation:
-                    referencedColumnName: idformation
+                    referencedColumnName: idFormation
     oneToMany:
         participation:
             targetEntity: participation

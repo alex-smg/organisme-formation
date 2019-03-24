@@ -24,3 +24,10 @@ Professeur:
             options:
                 fixed: false
     lifecycleCallbacks: {  }
+    oneToMany:
+        formation:
+            targetEntity: formation
+            mappedBy: professeur
+        session:
+            targetEntity: session
+            mappedBy: professeur
