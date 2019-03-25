@@ -4,8 +4,8 @@ include '../header.php';
 if ($_POST) {
     $addSession = new Session();
 
-    $addSession->setDateDebut($_POST['datedebut']);
-    $addSession->setDateFin($_POST['datefin']);
+    $addSession->setDateDebut(new DateTime($_POST['datedebut']));
+    $addSession->setDateFin(new DateTime($_POST['datefin']));
     $addSession->setSalle($entityManager->find("\Salle", $_POST['salle']));
     $addSession->setProfesseur($entityManager->find("\Professeur", $_POST['professeur']));
     $addSession->setFormation($entityManager->find("\Formation", $_POST['formation']));
@@ -25,7 +25,7 @@ $allFormation = $entityManager->getRepository('Formation')->findAll();
     <ul>
         <?php
         foreach ($allSession as $key => $session) {
-            echo "<li><a>Session du ". $session->getDateDebut() ." au " . $session->getDateFin() . ", avec le professeur: " . $session->getProfesseur() . "" . $session->getNom() . "</a></li>"; //href='eleve_by_entreprise.php?id=" . $session->getIdentreprise() . "'
+            echo "<li><a>Session du ". $session->getDateDebut()->format('Y-m-d') ." au " . $session->getDateFin()->format('Y-m-d') . ", avec le professeur: " . $session->getProfesseur()->getNom() . "</a></li>"; //href='eleve_by_entreprise.php?id=" . $session->getIdentreprise() . "'
         }
         ?>
     </ul>
@@ -34,8 +34,6 @@ $allFormation = $entityManager->getRepository('Formation')->findAll();
 <section>
     <h2>Ajouter une session</h2>
     <form action="" method="post">
-        <label for="nom">Nom</label>
-        <input type="text" name="nom" id="nom">
 
         <label for="datedebut">Date de debut:</label>
         <input type="date" id="datedebut" name="datedebut"
