@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 24, 2019 at 03:13 PM
+-- Generation Time: Mar 25, 2019 at 06:59 PM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.10
 
@@ -13,7 +13,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `orga_formation`
 --
-
 CREATE SCHEMA IF NOT EXISTS `orga_formation` DEFAULT CHARACTER SET utf8 ;
 USE `orga_formation` ;
 
@@ -97,7 +96,7 @@ CREATE TABLE `formation` (
 
 INSERT INTO `formation` (`idFormation`, `nom`, `categorie`, `professeur_idprofesseur`) VALUES
 (1, 'Symfony', 'Développement web', 1),
-(2, 'Symfony', 'Développement web', 1);
+(3, 'REACT', 'Développement web', 5);
 
 -- --------------------------------------------------------
 
@@ -234,7 +233,7 @@ ALTER TABLE `entreprise`
 -- AUTO_INCREMENT for table `formation`
 --
 ALTER TABLE `formation`
-  MODIFY `idFormation` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idFormation` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `participation`
@@ -247,6 +246,12 @@ ALTER TABLE `participation`
 --
 ALTER TABLE `professeur`
   MODIFY `idprofesseur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `salle`
+--
+ALTER TABLE `salle`
+  MODIFY `idsalle` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `session`

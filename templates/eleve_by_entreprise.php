@@ -6,7 +6,7 @@ if ($_GET['id']) {
     $company = $entityManager->find("\Entreprise", $_GET['id']);
 ?>
 <section>
-    <h1>Tous les salariés de la l'entreprise : <?= $company->getNom() ?></h1>
+    <h1>Tous les salariés de l'entreprise : <?= $company->getNom() ?></h1>
     <ul>
 <?php
 foreach ($allEleve as $key => $eleve) {
