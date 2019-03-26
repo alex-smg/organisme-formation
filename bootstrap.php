@@ -14,7 +14,7 @@ $config = Setup::createYAMLMetadataConfiguration(array(__DIR__."/config/yaml"), 
 
 // database configuration parameters
     $conn = array(
-        'host' => '127.0.0.1:3306',
+        'host' => 'localhost',
         'driver' => 'pdo_mysql',
         'user' => 'root',
         'password' => 'root',
