@@ -1,54 +1,31 @@
 <?php
 include '../header.php';
 
-
+if ($_POST) {
+    $addParticipation = new Participation();
+    $addParticipation->setEleve($entityManager->find("\Eleve", $_GET['id']));
+    $addParticipation->setSession($entityManager->find("\Session", $_POST['session']));
+    $entityManager->persist($addParticipation);
+    $entityManager->flush();
+}
 
 
 
     if (! empty($_GET['id'])) {
-        $Eleve = $entityManager->getRepository("Eleve")->findBy(array('ideleve' => $_GET));
-
-        foreach ($Eleve as $key => $entreprise) {
-        $resultEntreprise =  $entreprise->getEntreprise();
-            }
-
-        $Entreprise = $entityManager->getRepository("Entreprise")->findBy(array('identreprise' => $resultEntreprise));
-
-
-        $Participation = $entityManager->getRepository("Participation")->findBy(array('eleve' => $_GET));
-
-        foreach ($Participation as $key => $participation) {
-            $resultSession =  $participation->getSession();
-        }
-
-        $sessionEleve = $entityManager->getRepository("Session")->findBy(array('idsession' => $resultSession));
-
-        foreach ($sessionEleve as $key => $session) {
-            $formation = $session->getFormation();
-        }
-
-        $formationEleve = $entityManager->getRepository('Formation')->findBy(array('idformation' => $formation));
-
+        $Eleve = $entityManager->getRepository("Eleve")->findBy(array('ideleve' => $_GET['id']));
 
         $allSession = $entityManager->getRepository('Session')->findAll();
 
-
-
-        ?><section class="eleve">
+        ?>
+<section class="eleve">
     <h3>Nom de l'eleve :</h3>
-    <ul><?php foreach ($Eleve as $key => $eleve) {
-            echo $eleve->getNom();
-        }
-        ?></ul>
+    <ul><?= $Eleve[0]->getNom() ?></ul>
     <h3> Entreprise:</h3>
-    <ul><?php foreach ($Entreprise as $key => $entreprise) {
-            echo $entreprise->getNom();
-        }
-        ?></ul>
+    <ul><?= $Eleve[0]->getEntreprise()->getNom() ?></ul>
     <h3> Formation suivi:</h3>
     <ul>
-        <?php foreach ($formationEleve as $key => $formation) {
-            echo '<li>'. $formation->getNom() . '</li>';
+        <?php foreach ($Eleve[0]->getParticipation() as $key => $participation) {
+            echo '<li>'. $participation->getSession()->getFormation()->getNom() . '</li>';
         }
         ?>
     </ul>
@@ -90,18 +67,6 @@ include '../header.php';
         echo'<h3>Vous devez choisir un eleve ! </h3>';
         echo '<a href="http://localhost:8888/organisme-formation/templates/show_eleves_list.php">Liste des eleves</a>';
     }
-
-
-    if ($_POST) {
-        $addParticipation = new Participation();
-        $addParticipation->setEleve($entityManager->find("\Eleve", $_GET['id']));
-        $addParticipation->setSession($entityManager->find("\Session", $_POST['session']));
-        $entityManager->persist($addParticipation);
-        $entityManager->flush();
-    }
-
-
-
 ?>
 
 

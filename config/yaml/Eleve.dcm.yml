@@ -33,9 +33,6 @@ Eleve:
         participation:
             targetEntity: participation
             mappedBy: eleve
-        formation:
-            targetEntity: formation
-            mappedBy: eleve
     manyToOne:
         entreprise:
             targetEntity: entreprise
