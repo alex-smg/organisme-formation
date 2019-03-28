@@ -20,7 +20,7 @@ $allProfesseurs = $entityManager->getRepository('Professeur')->findAll();
     <ul>
         <?php
         foreach ($allProfesseurs as $key => $professeur) {
-            echo "<li><a>"
+            echo "<li><a href='session_by_professeur.php?id=". $professeur->getIdprofesseur() ."'>"
             . $professeur->getNom() . " " 
             . $professeur->getPrenom() . "</a></li>";
         } // href='show_eleve.php?id=" . $eleve->getIdeleve() ."'

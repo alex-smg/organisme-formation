@@ -10,4 +10,9 @@
  */
 class SessionRepository extends Doctrine\ORM\EntityRepository
 {
+    public function getSessionByProfesseur($idProfesseur) {
+        
+        return $this->_em->createQuery('SELECT s FROM Session s WHERE s.professeur = ' . $idProfesseur)->getResult();
+
+    }
 }
