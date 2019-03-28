@@ -45,6 +45,7 @@ header ul li a:hover{
 
 h1, h2{
     text-align: center;
+    font-size: 1.8vw;
 
 }
 
@@ -52,16 +53,18 @@ form{
     margin: auto;
     width: 50%;
     margin-bottom: 10vh;
+    margin-top: 10vh;
 }
-.eleve{
+.flex{
     display: flex;
     justify-content: space-between;
     margin-top: 10vh;
+    margin-bottom: 10vh;
 }
 .eleve ul{
 
-    font-size: 2vw;
-    color: #ff1744;
+    font-size: 1.5vw;
+    color: #000046;
     font-weight: bold;
     text-align: center;
 
@@ -72,3 +75,16 @@ section{
     margin: auto;
 }
 
+
+.eleve h3{
+    text-align: center;
+
+}
+
+.form-group{
+    margin: 5vh 0 5vh 0;
+}
+
+section{
+    margin-top: 10vh;
+}
