@@ -34,17 +34,17 @@ if ($_POST) {
 </section>
 
 <section>
-
+    <h2>S'inscrire à une session</h2>
 
     <form method="post">
 
-        <h2>S'inscrire à une session</h2>
+
         <div class="form-group">
             <label for="session">Session</label>
             <select name="session" id="session">
                 <?php
                     foreach ($allSession as $key => $session) {
-                        echo "<option value='" . $session->getIdsession() . "'>"  . $session->getDateDebut()->format('d-m-Y') . " - " . $session->getDateFin()->format('d-m-Y H') . "</option>";
+                        echo "<option value='" . $session->getIdsession() . "'>"  . $session->getDateDebut()->format('d-m-Y H') . " - " . $session->getDateFin()->format('d-m-Y H') . "</option>";
                     }
                 ?>
             </select>
