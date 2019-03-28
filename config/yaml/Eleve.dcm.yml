@@ -1,5 +1,6 @@
 Eleve:
     type: entity
+    repositoryClass: EleveRepository
     table: eleve
     indexes:
         fk_eleve_entreprise1_idx:

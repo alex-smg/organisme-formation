@@ -1,5 +1,6 @@
 Entreprise:
     type: entity
+    repositoryClass: EntrepriseRepository
     table: entreprise
     id:
         identreprise:

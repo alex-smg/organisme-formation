@@ -14,22 +14,22 @@ require_once 'bootstrap.php';
     
     <ul>
         <li>
-            <a href="http://localhost:8888/organisme-formation/templates/show_entreprise.php">Entreprises</a>
+            <a href="http://localhost/ECV/organisme-formation/templates/show_entreprise.php">Entreprises</a>
         </li>
         <li>
-            <a href="http://localhost:8888/organisme-formation/templates/show_formation.php">Formations</a>
+            <a href="http://localhost/ECV/organisme-formation/templates/show_formation.php">Formations</a>
         </li>
         <li>
-            <a href="http://localhost:8888/organisme-formation/templates/show_eleves_list.php">Elèves</a>
+            <a href="http://localhost/ECV/organisme-formation/templates/show_eleves_list.php">Elèves</a>
         </li>
         <li>
-            <a href="http://localhost:8888/organisme-formation/templates/show_professeurs_list.php">Professeurs</a>
+            <a href="http://localhost/ECV/organisme-formation/templates/show_professeurs_list.php">Professeurs</a>
         </li>
         <li>
-            <a href="http://localhost:8888/organisme-formation/templates/show_salle.php">Salles</a>
+            <a href="http://localhost/ECV/organisme-formation/templates/show_salle.php">Salles</a>
         </li>
         <li>
-            <a href="http://localhost:8888/organisme-formation/templates/show_session.php">Sessions</a>
+            <a href="http://localhost/ECV/organisme-formation/templates/show_session.php">Sessions</a>
         </li>
     </ul>
 </header>

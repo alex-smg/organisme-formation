@@ -1,5 +1,6 @@
 Formation:
     type: entity
+    repositoryClass: FormationRepository
     table: formation
     indexes:
         fk_formation_professeur1_idx:

@@ -11,8 +11,8 @@ if ($_POST) {
     $entityManager->flush();
 }
 
-$allEleves = $entityManager->getRepository('Eleve')->findAll();
 $allEntreprise = $entityManager->getRepository('Entreprise')->findAll();
+$allEleves = $entityManager->getRepository('Eleve')->getAllEleveOrderByEntreprise();
 
 ?>
 

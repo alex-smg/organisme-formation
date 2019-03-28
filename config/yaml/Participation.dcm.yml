@@ -1,5 +1,6 @@
 Participation:
     type: entity
+    repositoryClass: ParticipationRepository
     table: participation
     indexes:
         fk_participation_session1_idx:

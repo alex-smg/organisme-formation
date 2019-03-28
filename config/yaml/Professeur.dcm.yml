@@ -1,5 +1,6 @@
 Professeur:
     type: entity
+    repositoryClass: ProfesseurRepository
     table: professeur
     id:
         idprofesseur:
