@@ -17,7 +17,7 @@ if ($_POST) {
         $allSession = $entityManager->getRepository('Session')->findAll();
 
         ?>
-<section class="eleve">
+Z<section class="eleve">
     <h3>Nom de l'eleve :</h3>
     <ul><?= $Eleve[0]->getNom() ?></ul>
     <h3> Entreprise:</h3>
@@ -25,7 +25,7 @@ if ($_POST) {
     <h3> Formation suivi:</h3>
     <ul>
         <?php foreach ($Eleve[0]->getParticipation() as $key => $participation) {
-            echo '<li>'. $participation->getSession()->getFormation()->getNom() . '</li>';
+            echo '<li>'. $participation->getSession()->getFormation()->getNom() . ' Note : '. $participation->getNote() .'</li>';
         }
         ?>
     </ul>
