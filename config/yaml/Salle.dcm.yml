@@ -1,5 +1,6 @@
 Salle:
     type: entity
+    repositoryClass: SalleRepository
     table: salle
     id:
         idsalle:

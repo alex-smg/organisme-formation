@@ -1,5 +1,6 @@
 Session:
     type: entity
+    repositoryClass: SessionRepository
     table: session
     indexes:
         fk_session_professeur1_idx:
